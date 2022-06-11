@@ -1,4 +1,4 @@
-import { PathFile } from "src/common/file-manager/valitation/validation.file"
+import { PathFile } from "src/core/utils/file-manager/valitation/validation.file"
 import { EnumToString } from "src/common/helpers/convert/enum-to-string.helper"
 import { Debug } from "src/constants/enums/action/action.enum"
 

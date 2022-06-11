@@ -8,7 +8,6 @@ export function start(){
     logger.setContext(`START`)
     logger.start('Iniciando...')
     const confEnv = ConfigEnvironment();
-
     return confEnv;
 
 }

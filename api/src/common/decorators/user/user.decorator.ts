@@ -1,5 +1,5 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-import { CallLogger } from 'src/common/logger/call/call.logger';
+import { CallLogger } from 'src/core/logger/call/call.logger';
 
 export const User = createParamDecorator(
   async (data: string, ctx: ExecutionContext) => {

@@ -9,7 +9,6 @@ import { ConfigEnvironment }  from './core/environments/env.config';
 import configType from './configuration/service/global/global.config';
 import { globalPipe } from './common/pipes';
 import { AppLogger } from './core/logger/logger.service';
-import { testConnection } from './database/test/test.config';
 import generateTypeormConfigFile from './core/build/debug/typeorm/generate-typeorm-config-file';
 import setDefaultUser from './core/build/debug/set-default/set-default-user';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
@@ -17,6 +16,7 @@ import { BadRequestExceptionFilter } from './common/filters/bad-request-exceptio
 import { QueryFailedExceptionFilter } from './common/filters/query-failed-exception.filter';
 import { ValidationExceptionFilter } from './common/filters/validation-exception.filter';
 import { start } from './core/build';
+import { testConnection } from './database/test/test.config';
 
 
 const config = start();
@@ -24,6 +24,7 @@ const config = start();
 // FUNCTION MAIN
 async function main() {
   await generateTypeormConfigFile(config); // GENERATE ORM CONFIG SYSTEM
+  console.log('----------config', config)
   const connection = await testConnection(config); // TEST CONNECTION DB
   if(!connection)  return false; // ERROR TEST CONNECTION DB
   bootstrap(); // SUCCESS TEST CONNECTION DB

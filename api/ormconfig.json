@@ -8,10 +8,10 @@
   "port": 5433,
   "env": "development",
   "entities": [
-    "C:\\sergioTorrejon\\system\\system-core\\api\\dist\\configuration\\service\\database\\typeorm/../**/*.entity{.ts,.js}"
+    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\database\\typeorm/../**/*.entity{.ts,.js}"
   ],
   "migrations": [
-    "C:\\sergioTorrejon\\system\\system-core\\api\\dist\\configuration\\service\\database\\typeorm/migrations/*{.ts,.js}"
+    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\database\\typeorm/migrations/*{.ts,.js}"
   ],
   "logging": true,
   "logger": "file",

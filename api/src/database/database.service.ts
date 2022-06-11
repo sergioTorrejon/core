@@ -6,7 +6,7 @@ import { ConnectionOptions } from 'typeorm';
 export const databaseProviders = [
   TypeOrmModule.forRootAsync({
     async useFactory() {
-       
+      const ConnectionOptions =await ConfBD() as ConnectionOptions;
       return ConnectionOptions
     },
   }),

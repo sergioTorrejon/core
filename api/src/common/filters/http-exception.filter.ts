@@ -1,6 +1,6 @@
 import { ExceptionFilter, Catch, ArgumentsHost, HttpException } from '@nestjs/common';
 import { AppLogger } from 'src/core/logger/logger.service';
-import { FailedResponseDTO } from '../dtos/failed-response.dto';
+import { FailedResponseDTO } from '../dtos/error/failed-response.dto';
 
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {

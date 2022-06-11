@@ -3,7 +3,7 @@ import { Response } from 'express';
 import { PS_EXCEPTIONS } from 'src/constants/keys/postgres-constants';
 import { AppLogger } from 'src/core/logger/logger.service';
 import { QueryFailedError } from 'typeorm';
-import { FailedResponseDTO } from '../dtos/failed-response.dto';
+import { FailedResponseDTO } from '../dtos/error/failed-response.dto';
 
 
 
