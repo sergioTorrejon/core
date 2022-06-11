@@ -1,0 +1,20 @@
+{
+  "server_port": 3005,
+  "type": "postgres",
+  "host": "localhost",
+  "username": "admin",
+  "password": "Bolivia2022",
+  "database": "db_sys_test",
+  "port": 5433,
+  "env": "development",
+  "entities": [
+    "C:\\sergioTorrejon\\system\\system-core\\api\\dist\\configuration\\service\\database\\typeorm/../**/*.entity{.ts,.js}"
+  ],
+  "migrations": [
+    "C:\\sergioTorrejon\\system\\system-core\\api\\dist\\configuration\\service\\database\\typeorm/migrations/*{.ts,.js}"
+  ],
+  "logging": true,
+  "logger": "file",
+  "autoLoadEntities": true,
+  "synchronize": true
+}
