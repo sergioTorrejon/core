@@ -1,2 +1,2 @@
 # core
-Aplicacion base para la creacion de otros proyectos
+Aplicacion Core base para la creacion de otros proyectos
