@@ -1,4 +1,4 @@
-import { ENV } from 'src/configuration/keys/env';
+import { ENV } from 'src/configuration/settings/env/env';
 import { Environment } from 'src/constants/enums';
 import { AppLogger } from 'src/core/logger/logger.service';
 import Development from './development/development.config';

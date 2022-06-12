@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 import { DATABASE_CONFIG } from 'src/configuration/service/database/database.config';
-import { TYPEORM_CONFIG } from 'src/configuration/service/database/typeorm/typeorm.keys';
+import { TYPEORM_CONFIG } from 'src/configuration/service/typeorm/typeorm.keys';
 import { Environment } from 'src/constants/enums';
 dotenv.config();
 

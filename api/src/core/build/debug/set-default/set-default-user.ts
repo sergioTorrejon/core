@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { ConfigService } from '@nestjs/config';
-import { DEFAULT_USER, DEFAULT_USER_EMAIL, DEFAULT_USER_PASSWORD } from '../../../../configuration/service/config.keys';
+import { DEFAULT_USER, DEFAULT_USER_EMAIL, DEFAULT_USER_PASSWORD } from '../../../../configuration/service/config/config.service';
 import { Role } from 'src/constants/enums';
 import { User } from 'src/modules/schemas/user/entities';
 

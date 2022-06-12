@@ -5,10 +5,10 @@ import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './core/auth/auth.module';
 import { UserModule } from './modules/schemas/user/user.module';
 import { ConfigModule } from '@nestjs/config';
-import { LoggerMiddleware } from './common/middlewares/logger.middleware';
+import { LoggerMiddleware } from './core/middlewares/logger.middleware';
 import { AppLoggerModule } from './core/logger/logger.module';
 import { APP_FILTER } from '@nestjs/core';
-import { HttpExceptionFilter } from './common/filters/http-exception.filter';
+import { HttpExceptionFilter } from './common/filters';
 
 @Module({
   imports: [    

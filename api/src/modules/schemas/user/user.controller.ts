@@ -25,7 +25,6 @@ import { RoleAdminGuard } from 'src/core/auth/guards/role-admin.guard';
 import { PaginationDto } from 'src/common/dtos';
 import { Auth, User } from 'src/common/decorators';
 import { AppLogger } from 'src/core/logger/logger.service';
-import { HttpExceptionFilter } from 'src/common/filters/http-exception.filter';
 
 @ApiTags('User')
 @Controller('user')

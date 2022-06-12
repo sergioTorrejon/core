@@ -1,8 +1,5 @@
 import { BadRequestException } from '@nestjs/common';
-
-export interface CustomValidationError {
-  [key: string]: CustomValidationError | string[];
-}
+import { CustomValidationError } from 'src/common/interfaces';
 
 export class CustomValidationException extends BadRequestException {
   constructor(public validationErrors: CustomValidationError) {

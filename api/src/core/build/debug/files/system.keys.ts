@@ -1,5 +1,5 @@
 import { PathFile } from "src/core/utils/file-manager/valitation/validation.file"
-import { EnumToString } from "src/common/helpers/convert/enum-to-string.helper"
+import { EnumToString } from "src/common/helpers/convert/enum-to-string.convert"
 import { Debug } from "src/constants/enums/action/action.enum"
 
 // FILE TYPEORM CONFIG - NO MODIFICAR

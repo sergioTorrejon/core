@@ -1,11 +1,12 @@
 import { ExceptionFilter, Catch, ArgumentsHost } from '@nestjs/common';
 import { Response } from 'express';
+import { FailedResponseDTO } from 'src/common/dtos';
+import { QueryFailedExceptionI } from 'src/common/interfaces';
 import { PS_EXCEPTIONS } from 'src/constants/keys/postgres-constants';
 import { AppLogger } from 'src/core/logger/logger.service';
 import { QueryFailedError } from 'typeorm';
-import { FailedResponseDTO } from '../dtos/error/failed-response.dto';
 
-
+    //TODO: REVISAR SI SE PUEDE MEJORAR
 
 @Catch(QueryFailedError)
 export class QueryFailedExceptionFilter implements ExceptionFilter {

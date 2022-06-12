@@ -1,9 +1,9 @@
 import { Injectable, Logger, Scope } from '@nestjs/common';
-import { fullTimeStamp } from 'src/common/helpers/date/local.date';
+import { fullTimeStamp } from 'src/common/helpers/format/datetime.format';
 import { AppEndFile } from 'src/core/utils/file-manager/update/update.file';
 import { FILE_LOG_ERROR, FILE_LOG_INFO, FILE_LOG_LOG, PATH_LOG_ERROR, PATH_LOG_INFO, PATH_LOG_LOG } from 'src/core/build/debug/files/system.keys';
 import { Debug, DebugLogs } from 'src/constants/enums/action/action.enum';
-import pathStorageLogs from 'src/configuration/path/filestorage.path';
+import pathStorageLogs from 'src/common/helpers/path/88filestorage.path';
 
 @Injectable({ scope: Scope.TRANSIENT })
 export class AppLogger {

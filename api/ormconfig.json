@@ -1,5 +1,6 @@
 {
   "server_port": 3005,
+  "ssl": false,
   "type": "postgres",
   "host": "localhost",
   "username": "admin",
@@ -8,10 +9,10 @@
   "port": 5433,
   "env": "development",
   "entities": [
-    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\database\\typeorm/../**/*.entity{.ts,.js}"
+    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\typeorm/../**/*.entity{.ts,.js}"
   ],
   "migrations": [
-    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\database\\typeorm/migrations/*{.ts,.js}"
+    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\typeorm/migrations/*{.ts,.js}"
   ],
   "logging": true,
   "logger": "file",

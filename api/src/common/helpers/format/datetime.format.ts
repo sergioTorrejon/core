@@ -1,5 +1,5 @@
 import moment = require('moment');
-
+    //TODO: REVISAR SI SE PUEDE MEJORAR
 export const MomentDate= () => { 
     return  moment(new Date());
 }

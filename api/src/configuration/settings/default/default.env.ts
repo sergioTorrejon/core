@@ -5,7 +5,6 @@ export const DEFAULT_ENV=
 
     SERVER_PORT:3000, //PUERTO DE ARRANQUE DEL SERVIDOR POR DEFECTO 3000
 
-
     DATABASE_TYPE : 'postgres',
     DATABASE_HOST : 'localhost',
     DATABASE_PORT : '5432',
