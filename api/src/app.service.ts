@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { responseSuccess } from './core/res/res.config';
+import { responseSuccess } from './services/res/res.config';
 import { resMsg } from './constants/enums';
 
 @Injectable()

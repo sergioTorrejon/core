@@ -1,4 +1,5 @@
 {
+  "env": "dev",
   "server_port": 3005,
   "ssl": false,
   "type": "postgres",
@@ -7,12 +8,11 @@
   "password": "Bolivia2022",
   "database": "db_sys_test",
   "port": 5433,
-  "env": "development",
   "entities": [
-    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\typeorm/../**/*.entity{.ts,.js}"
+    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\database\\typeorm/../**/*.entity{.ts,.js}"
   ],
   "migrations": [
-    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\configuration\\service\\typeorm/migrations/*{.ts,.js}"
+    "C:\\sergioTorrejon\\git\\web\\core\\api\\dist\\database\\typeorm/migrations/*{.ts,.js}"
   ],
   "logging": true,
   "logger": "file",

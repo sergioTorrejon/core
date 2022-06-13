@@ -9,7 +9,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { User } from './entities';
 import { UserCreateDto, UserUpdateDto } from './dtos';
-import { responseError, responseSuccess } from 'src/core/res/res.config';
+import { responseError, responseSuccess } from 'src/services/res/res.config';
 import { resMsg, Status } from 'src/constants/enums';
 import { PaginationDto } from 'src/common/dtos';
 

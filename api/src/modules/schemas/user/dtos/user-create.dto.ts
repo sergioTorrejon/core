@@ -6,7 +6,7 @@ import {
   IsArray,
   IsEnum,
 } from 'class-validator';
-import { EnumToString } from 'src/common/helpers';
+import { EnumToString } from 'src/utils/helpers';
 import { Role } from 'src/constants/enums';
 
 export class UserCreateDto {

@@ -1,7 +1,7 @@
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { INestApplication } from '@nestjs/common';
 import { resMsg } from 'src/constants/enums';
-import { API_NAME, OWNER } from 'src/configuration/settings/system/system.config';
+import { API_NAME, OWNER } from 'src/config/settings/setting.config';
 
 export const initSwagger = (app: INestApplication) => {
   const swaggerConfig = new DocumentBuilder()

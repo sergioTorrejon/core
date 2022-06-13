@@ -1,17 +1,17 @@
-import { Injectable, Logger, Scope } from '@nestjs/common';
-import { fullTimeStamp } from 'src/common/helpers/format/datetime.format';
-import { AppEndFile } from 'src/core/utils/file-manager/update/update.file';
-import { FILE_LOG_ERROR, FILE_LOG_INFO, FILE_LOG_LOG, PATH_LOG_ERROR, PATH_LOG_INFO, PATH_LOG_LOG } from 'src/core/build/debug/files/system.keys';
+import { Injectable, Logger, LoggerService, Scope } from '@nestjs/common';
+import { fullTimeStamp } from 'src/utils/helpers/format/datetime.format';
+import { AppEndFile } from 'src/utils/file-manager/update/update.file';
+import { FILE_LOG_ERROR, FILE_LOG_INFO, FILE_LOG_LOG, PATH_LOG_ERROR, PATH_LOG_INFO, PATH_LOG_LOG } from 'src/services/build/debug/files/system.keys';
 import { Debug, DebugLogs } from 'src/constants/enums/action/action.enum';
-import pathStorageLogs from 'src/common/helpers/path/88filestorage.path';
+import pathStorageLogs from '../../utils/storage/logs.storage';
 
 @Injectable({ scope: Scope.TRANSIENT })
-export class AppLogger {
+export class AppLogger implements LoggerService {
   private context?: string;
   private process?: string;
   private message?: string;
   private prefix?: string;
-  private logger = new Logger()
+  public logger = new Logger()
 
   public setContext(context: string): void {
     this.context = context;
@@ -25,8 +25,6 @@ export class AppLogger {
   public setProcess(process: string): void {
     this.process = process;
   }
-
-
 
   //SAVE TO FILES
   debugSaveFile( message: string='') {
@@ -56,6 +54,14 @@ export class AppLogger {
   start(message: string='') {
     console.log('file',pathStorageLogs(Debug.DEBUG))
     this.debugSaveFile(`\n\n\n----------------------`);
+    this.debugSaveFile(`${message}`)
+    this.logger.log(message)
+  }
+
+  init(context:string, message: string='') {
+    this.setContext(context);
+    console.log('file',pathStorageLogs(Debug.DEBUG))
+    this.debugSaveFile(`\n\n\n----------------------`);
     this.debugSaveFile(` ${message}`)
     this.logger.log(message)
   }
@@ -71,13 +77,13 @@ export class AppLogger {
 
   log(message: string='' ) {
     //this.logger.log(message)
-    AppEndFile(PATH_LOG_LOG,FILE_LOG_LOG,`${fullTimeStamp()}--[${this.context}]-- ${message}`)
+    AppEndFile(pathStorageLogs(Debug.LOG),DebugLogs.LOG,`${fullTimeStamp()}--[${this.context}]-- ${message}`)
     this.info(message)
   }
 
   error(message: string='') {
     this.logger.error(message)
-    AppEndFile(PATH_LOG_ERROR,FILE_LOG_ERROR,`${fullTimeStamp()}--[${this.context}]-- ${message}`)
+    AppEndFile(pathStorageLogs(Debug.ERROR),DebugLogs.ERROR,`${fullTimeStamp()}--[${this.context}]-- ${message}`)
   }
 
   warn( ) {
@@ -93,3 +99,5 @@ export class AppLogger {
   }
 
 }
+
+export const logger = new AppLogger()
